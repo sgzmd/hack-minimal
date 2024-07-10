@@ -1,0 +1,21 @@
+{
+    "name": "Minimal HHVM Development Container",
+    "dockerComposeFile": [ "../docker-compose.yml" ],
+    "service": "minhack",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    "mounts": [
+      "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    ],
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "pranayagarwal.vscode-hack",
+          "ms-azuretools.vscode-docker"
+        ]
+      }
+    },
+    "remoteUser": "root",
+    "postCreateCommand": "apt-get update && apt-get install -y git && composer install"
+  }
+  

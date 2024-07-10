@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  minhack:
+    build:
+      context: .
+      dockerfile: hhvm.dockerfile
+    platform: linux/amd64
+    volumes:
+      - ./:/mnt/project
+    tty: true
