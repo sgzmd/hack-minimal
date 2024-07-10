@@ -16,6 +16,6 @@
       }
     },
     "remoteUser": "root",
-    "postCreateCommand": "apt-get update && apt-get install -y git && composer install"
+    "postCreateCommand": "apt-get update && apt-get install -y git && composer install && curl https://raw.githubusercontent.com/hhvm/hhast/master/.hhconfig > /workspace/.hhconfig"
   }
   
